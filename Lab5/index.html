@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratorio #5</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+    }
+    section {
+      background-color: rgb(0, 153, 255);
+    }
+    .response-wrapper {
+      background-color: cadetblue;
+    }
+    #response-wrapper {
+      background-color: rgb(167, 227, 255); /* Aplico el color que quieres */
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section>
+      <form>
+        <label for="cadena">Cadena:</label>
+        <input type="text" name="cadena" id="cadena">
+        <select id="color-select">
+          <option value="white">Blanco</option>
+          <option value="black">Negro</option>
+          <option value="blue">Azul</option>
+          <option value="gray">Gris</option>
+          <option value="red">Rojo</option>
+          <option value="green">Verde</option>
+        </select>
+      </form>
+    </section>
+    <section id="response-wrapper" class="response-wrapper">
+      <div id="response"></div>
+    </section>
+  </main>
+  <script src="js/app.js"></script>
+</body>
+</html>
