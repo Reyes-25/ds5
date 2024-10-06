@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio #2</title>
+</head>
+<body>
+    <h1>Laboratorio #2 </h1>
+    <h3>¿Qué es javascript y en que se asemeja con Java?</h3>
+    <p>
+        Si bien JavaScript y Java comparten algunas similitudes, son lenguajes fundamentalmente diferentes con diferentes casos de uso. Java se utiliza típicamente para construir aplicaciones complejas a escala empresarial, mientras que JavaScript es el lenguaje preferido para el desarrollo web y la ejecución de scripts en una página web.
+    </p>
+
+    <script>
+        /* 2.	Declarar dos variables con la palabra reservada
+        "var", imprimir el resultado de las operaciones de "Suma",
+        "Resta", "Multiplicación" y "División" en la consola. 
+        Las variables pueden ser estáticas. */ 
+        var num1 = 20;
+        var num2 = 10;
+
+        console.log("Suma:", num1 + num2);           // Suma
+        console.log("Resta:", num1 - num2);          // Resta
+        console.log("Multiplicación:", num1 * num2); // Multiplicación
+        console.log("División:", num1 / num2);       // División
+
+        /* 3.	Declarar dos variables con la palabra reservada 
+        "let", imprimir la concatenación de ellas.*/
+
+        let nombre = "Amir";
+        let apellido = "Reyes";
+
+        console.log("Mi nombre es ", nombre + " " + apellido);
+
+        /* 4.	Declarar dos variables con la palabra reservada 
+        "const", imprimir cuál es el tipo de dato de esa variable. */
+
+        const pi = 3.1416;        
+        const saludo = "Hola";    
+
+        console.log("Tipo de dato de pi:", typeof pi);         
+        console.log("Tipo de dato de saludo:", typeof saludo);
+
+        /* 5.   Declarar una variable tipo Objeto, colocar 4 llaves 
+        dentro de él que contengan un number, un string, un booleano 
+        y un objeto vacío, en ese mismo orden. */
+
+        const misDatos = {
+            yo: "Amir",               
+            edad: 33,                   
+            MessiGoat: true,        
+            miedos: {}  
+        };
+
+        console.log("Mis datos:", misDatos);
+
+        /* 6.   Escribir una función en JS que tome un número entero 
+        positivo como argumento y devuelva la suma de todos los números 
+        menores que sean múltiplos de 3 o 5. */
+
+        function sumaMultiplos(n) {
+            let suma = 0;
+            for (let i = 1; i < n; i++) {
+                if (i % 3 === 0 || i % 5 === 0) {
+                suma += i;
+                }
+            }
+                return suma;
+        }
+
+        console.log(sumaMultiplos(15));
+
+    </script>
+</body>
+</html>

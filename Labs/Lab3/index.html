@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 3</title>
+</head>
+<body>
+    <h1>Laboratorio #3 </h1>
+
+    <script>
+        /*1. Escribir una función que, dada una cadena "t", 
+        retorne si un número es un palíndromo de doble base 
+        o no. (Palíndromo en base 10 y base 2).*/
+
+       // Función que pide el ingreso de un numero para comprobación
+        (function() 
+        {
+            let numero = parseInt(prompt("Ingresa un número:"));
+9
+            // Función de verificacion si una cadena es un palíndromo
+            const esPalindromo = function(str) 
+            {
+                return str === str.split('').reverse().join('');
+            };
+
+            // Función que verifica si el número es palíndromo en base 10 y base 2
+            const esPalindromoDobleBase = function(t)  
+            {
+                let base10 = t.toString();
+                let base2 = t.toString(2);
+                return esPalindromo(base10) && esPalindromo(base2);
+            };
+
+            // Respuesta en consola
+            if (esPalindromoDobleBase(numero)) 
+            {
+                console.log(`${numero} es un palíndromo en base 10 y base 2.`);
+            } else 
+                {
+                    console.log(`${numero} no es un palíndromo en base 10 y base 2.`);
+                }
+        })();
+
+    </script>
+
+    <script>
+        /* 2. Escribir una función que, dada una cadena "t", 
+        retorne la cantidad de caracteres de la cadena. */
+
+        function contarCaracteres(t) 
+        // Crear un objeto para almacenar la cantidad de cada carácter
+        {
+            let conteo = {};
+
+        // Recorre los carácter de la cadena
+        for (let char of t) 
+        {
+            if (conteo[char]) 
+            {
+                conteo[char]++;
+            } else {
+                    // Si no existe, inicializarlo en 1
+                    conteo[char] = 1;
+                    }
+            }
+
+            return conteo;
+        }
+
+        // Ejemplo de uso
+        //let cadena = "AABBBACAA";
+        let cadena = prompt("Ingresa una palabra en mayuscula: ");
+        let resultado = contarCaracteres(cadena);
+        console.log(resultado);  // { A: 5, B: 3, C: 1 }
+
+    </script>
+
+    <script>
+        (function() 
+        {
+            // Pedimos ingresar un año para comprobacion de año bisiesto
+            let año = parseInt(prompt("Ingresa un año:"));
+        
+            const esBisiesto = function(a)  // Un año es bisiesto si es divisible por 4
+            {
+            
+                // Este "return" nos muestra que no es divisible por 100, a menos que también sea divisible por 400
+                return (a % 4 === 0 && a % 100 !== 0) || (a % 400 === 0);
+            };
+
+            // Respuesta en consola
+            if (esBisiesto(año)) 
+            {
+                console.log(`${año} es un año bisiesto.`);
+            } else 
+                {
+                console.log(`${año} no es un año bisiesto.`);
+                }
+        })();
+
+    </script>
+
+    <script>
+        /* 3. Escribir una función que, dado un número 
+        "n" ( 0 < n < 1000000), retorne la sumatoria 
+        de todos los número primos debajo de ese número. */ 
+
+        (function() 
+        {
+            // Pedimos un numero para comprobacion de sumatoria solicitada
+            let n = parseInt(prompt("Ingresa un número entre 0 y 1,000,000:"));
+
+            // Función para comprobar si el numero es primo
+            const esPrimo = function(num) 
+            {
+                if (num <= 1) return false;
+                if (num <= 3) return true;
+                if (num % 2 === 0 || num % 3 === 0) return false;
+                for (let i = 5; i * i <= num; i += 6) 
+                {
+                    if (num % i === 0 || num % (i + 2) === 0) return false;
+                }
+                    return true;
+            };
+
+            // Función para calcular la sumatoria de todos los números primos menores que n
+            const sumatoriaDePrimos = function(limit) 
+            {
+                let suma = 0;
+                for (let i = 2; i < limit; i++) 
+                {
+                    if (esPrimo(i)) 
+                    {
+                        suma += i;
+                    }
+                }
+                    return suma;
+            };
+
+            // Verificar el rango del número ingresado y mostrar el resultado
+            if (n > 0 && n < 1000000) 
+            {
+                console.log(`La sumatoria de todos los números primos menores que ${n} es ${sumatoriaDePrimos(n)}.`);
+            } else 
+            {
+                console.log("El número ingresado no está en el rango permitido de 0 a 1,000,000.");
+            }
+        })();
+
+
+    </script>
+</body>
+</html>
