@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 7</title>
+    <style>
+        body {
+            background-color: lightblue;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        form {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 20px;
+        }
+
+        .contenido {
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px;
+            margin: 20px;
+            background-color: lightskyblue;
+            border: 2px solid lightseagreen;
+            cursor: pointer;
+        }
+
+        #lista-nombres {
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            color: black;
+        }
+
+        .participante {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .participante button {
+            padding: 5px;
+            background-color: lightseagreen;
+            border: 1px solid lightslategray;
+            cursor: pointer;
+            font: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #bar-chart {
+            max-width: 700px;
+            margin: 50px auto;
+            
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="contenido">
+                <form id="form-nombre-color">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa el nombre">
+
+                    <label for="color">Color</label>
+                    <input type="text" id="hex-color" name="hex-color" placeholder="#ff5733">
+                    <select name="color" id="color">
+                        <option value="">Seleccionar color</option>
+                        <option value="black">Negro</option>
+                        <option value="white">Blanco</option>
+                        <option value="red">Rojo</option>
+                        <option value="blue">Azul</option>
+                        <option value="yellow">Amarillo</option>
+                        <option value="green">Verde</option>
+                        <option value="pink">Rosado</option>
+                    </select>                             
+                </form>
+                <div>
+                    <button type="button" id="btn_agregar">Agregar</button>
+                </div>
+                <div id="lista-nombres" class="contenido">
+                </div>
+            </div>
+
+            <div>
+                <canvas id="bar-chart"></canvas>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script src="js/app.js"></script>
+        </section>
+    </main>
+</body>
+</html>
