@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #0a192f;
+  }
+
+#app {
+  text-align: center;
+  width: 600px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.logo {
+  width: 150px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+h1 {
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+p {
+  color: black;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+  text-align: left;
+  color: black;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Alineación horizontal de los botones */
+.button-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #1e90ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  flex: 1; /* Distribuye el espacio de manera equitativa */
+}
+
+button:hover {
+  background-color: #1c86ee;
+}
+
+#clearButton {
+  background-color: #1c86ee;
+}
+
+#clearButton.hidden {
+  display: none;
+}
+
+
+.result-box {
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.pokemon-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokemon-card img {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.pokemon-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.pokemon-details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0px;
+  color: darkslategrey;
+}
+
+.pokemon-details p {
+  margin: 2px 0;
+  color: darkslategrey;
+}
+
+.hidden {
+  display: none;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+ul {
+  padding-left: 20px;
+  text-align: left;
+}
