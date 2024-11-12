@@ -28,20 +28,21 @@ const handlers = {
       const pokemonData = await api.getPokemonData(pokemonName);
       if (pokemonData) {
         ui.displayPokemonData(pokemonData);
-        elements.clearButton.classList.remove('hidden'); 
-        } else {
+        elements.clearButton.classList.remove('hidden');
+      } else {
         ui.displayError('Pokémon no encontrado');
       }
-      elements.pokemonNameInput.value = '';
+      // Eliminar esta línea para que el input no se borre automáticamente después de la búsqueda
+      // elements.pokemonNameInput.value = '';
     } else {
       ui.displayError('Ingrese un nombre de Pokémon');
     }
   },
   handleClear: () => {
-    elements.pokemonNameInput.value = '';
+    elements.pokemonNameInput.value = ''; // Borra el valor solo cuando se presiona el botón de limpiar
     elements.pokemonInfoContainer.classList.add('hidden');
     elements.pokemonInfoContainer.innerHTML = '';
-    elements.clearButton.classList.add('hidden'); 
+    elements.clearButton.classList.add('hidden');
   },
   handleKeyPress: (event) => {
     if (event.key === 'Enter') {

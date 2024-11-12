@@ -4,17 +4,23 @@ export const displayPokemonData = (pokemon) => {
   pokemonInfoContainer.classList.remove('hidden');
   pokemonInfoContainer.innerHTML = `
     <div class="pokemon-card">
-      <div class="pokemon-name">${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)} (${pokemon.id})</div>
-      <div class="pokemon-details">
-        <div><strong>Sprites</strong></div>
-        <div>
-          <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}">
-          <img src="${pokemon.sprites.back_default}" alt="${pokemon.name}">
+      <div>
+        <div class="pokemon-name">${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)} (${pokemon.id})</div>
+        
+        <div class="pokemon-details">
+          <div><strong>Sprites</strong></div>
+          <div>
+            <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}">
+            <img src="${pokemon.sprites.back_default}" alt="${pokemon.name}">
+          </div>
         </div>
       </div>
-      <div class="pokemon-details">
-        <p><strong>Weight / Height</strong></p>
-        <p>${pokemon.weight / 10} / ${pokemon.height / 10}</p>
+
+      <div>
+        <div class="pokemon-stats">
+          <div><strong>Weight / Height</strong></div>
+          <div>${pokemon.weight / 10} / ${pokemon.height / 10}</div>
+        </div>
       </div>
     </div>
   `;
