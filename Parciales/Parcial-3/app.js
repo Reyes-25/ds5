@@ -67,14 +67,14 @@ const handlers = {
           ui.displayError('Habilidad no encontrada');
         }
       }
+      // No borramos el valor del input aquí, así permanece el texto de búsqueda
       elements.clearButton.classList.remove('hidden');
-      elements.pokemonNameInput.value = '';
     } else {
       ui.displayError('Ingrese un término de búsqueda');
     }
   },
   handleClear: () => {
-    elements.pokemonNameInput.value = '';
+    elements.pokemonNameInput.value = ''; // Se borra el valor solo cuando se presiona el botón de limpiar
     elements.pokemonInfoContainer.classList.add('hidden');
     elements.pokemonInfoContainer.innerHTML = '';
     elements.clearButton.classList.add('hidden');

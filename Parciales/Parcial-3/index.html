@@ -7,30 +7,45 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="app">
-    <img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" alt="PokeAPI Logo" class="logo">
-    <h1>Buscador de pokemones</h1>
-    <p>Busca desde Pokemones hasta las habilidades de los mismos.</p>
-
-    <div class="search-container">
-      <label for="pokemonName">Buscar</label>
-      <input type="text" id="pokemonName" placeholder="Buscar Pokémon o habilidad">
-
-      <label for="searchType">Tipo de búsqueda</label>
-      <select id="searchType">
-        <option value="pokemon">Por Pokémon</option>
-        <option value="ability">Por Habilidad</option>
-      </select>
-
-      <div class="button-container">
-        <button id="searchButton">Buscar</button>
-        <button id="clearButton" class="hidden">Limpiar</button>
-      </div> 
+  <div class="app-group">
+    <div>
+      <img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" alt="PokeAPI Logo" class="logo">
     </div>
+    <div id="app">
+      <h1>Buscador de pokemones</h1>
+      <p>Busca desde Pokemones hasta las habilidades de los mismos.</p>
+  
+      <div class="search-container">
+        <div>
+          <div>
+            <label for="pokemonName">Buscar</label>
+          <input type="text" id="pokemonName">
+          </div>
+        </div>
 
-    <div id="pokemonInfo" class="result-box hidden">     
+          <div>
+            <label for="searchType">Tipo de búsqueda</label>
+            <select id="searchType">
+              <option value="pokemon">Por Pokémon</option>
+              <option value="ability">Por Habilidad</option>
+            </select>
+          </div>
+      </div>
+      
+        
+  
+        <div class="button-container">
+          <button id="clearButton" class="hidden">Limpiar</button>
+          <button id="searchButton">Buscar</button>        
+        </div> 
     </div>
+    
+    
+      <div id="pokemonInfo" class="result-box hidden">     
+      </div>
+    
   </div>
+  
 
   <script type="module" src="app.js"></script>
 </body>
