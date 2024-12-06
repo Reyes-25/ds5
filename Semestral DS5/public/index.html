@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodingTrivia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="profile">
+            <img id="profile-image" src="/images/pfp_default.png">
+            <input type="file" id="file-input" style="display: none;" accept="image/*">
+            <button class="username" id="display-username" onclick="openDialog()"></button>
+        </div>
+        
+        <div class="dialog-overlay" id="dialog">
+            <div class="dialog-box">
+            <button class="close-btn" onclick="closeDialog()">X</button>
+                <div class="dialog-header">
+                    <h2>INGRESA TU USUARIO</h2>
+                </div>
+                <div class="dialog-content">
+                    <input maxlength="12" minlength="2" text" id="username" class="input-field" placeholder="Escribe tu usuario" autocomplete="off">
+                </div>
+                <!-- <div class="dialog-footer">
+                    <button class="save-btn" onclick="saveName()">GUARDAR</button>
+                </div> -->
+            </div>
+        </div>
+        <button class="create-room" onclick="window.location.href='game_structure.html'">CREAR SALA</button>
+    </header>
+    <div class="banner-container">
+        <img src="/images/probthis.jpg" alt="" class="banner">
+    </div>  
+    <main>
+        <p class="code-text">Code Like an Artist</p>
+        <p class="no-rooms">NO HAY SALAS CREADAS POR EL MOMENTO</p>
+    </main>
+    <script src="script-index.js"></script>
+    <script src="save-info.js"></script>
+</body>
+</html>

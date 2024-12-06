@@ -1,0 +1,6 @@
+instalaciones necesarias 
+    instalar node
+    instalar sqlite3 
+
+ejecución...
+    node server.js

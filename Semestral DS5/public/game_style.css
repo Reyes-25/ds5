@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  font-family: 'Ubuntu Mono', monospace;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  flex: 3;
+  background-color: #090F12;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.header {
+  padding: 10px;
+}
+
+.exit-btn {
+  width: 50px;
+  height: auto;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.center-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 420px;
+  height: 360px;
+  background-color: #01070A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -50px;
+}
+
+
+
+.trivia-title{
+  margin-top: 60px;
+  font-size: 50px;
+  text-align: center;
+}
+
+.menu {
+  margin-top: -25px;
+  list-style: none;
+  text-align: center;
+  padding: 20%;
+}
+
+.menu li {
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  margin: 10px 0;
+  display: inline-block; /* Ocupa solo el espacio necesario */
+  transform: color 0.3s;
+}
+
+.menu li:hover{
+  color: red;
+}
+
+.display-question{
+  font-size: 200px;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.input-bar {
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 25px;
+  font-size: 40px;
+  border: none;
+  outline: none;
+  background-color: #01070A;
+  color: white;
+}
+
+.left-box  {
+  width: 350px;
+  background-color: #000000e8;
+  color: white;
+  padding: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+  
+
+.input-container{
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 41px;
+  color: white;
+}
+
+.input-container input{
+    flex: 1;
+    width: 350px;
+    position: absolute;
+    bottom: 0;
+    border: none;
+    height: 50px;
+    outline: none;
+    margin-left: -10px;
+    background-color: #00000083;
+    color: #fff;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.messages-container {
+  flex: 1;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  overflow-y: auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: calc(100vh - 150px); /* Asegura que ocupe todo el espacio disponible */
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.message img {
+  width: 37px;
+  height: 37px;
+  border-radius: 10%;
+}
+
+.message-text {
+  background-color: rgba(255, 255, 255, 0.048);
+  padding: 10px;
+  border-radius: 5px;
+  word-wrap: break-word;
+  color: white;
+  overflow: hidden;  
+}
+
+::-webkit-scrollbar{
+  width: 2em;
+}
+
+.displaying-question{
+  font-size: 70px;
+  color: #E0A415;
+}
+
+.results-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  padding: 20px;
+  width: 250px;
+  margin: 0 auto;
+}
+
+
+.winner-img {
+  width: 125px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.winnnner{
+  width: 50px;
+  height: auto;
+}
+.user-name {
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #ffffff;
+  text-align: center;
+}
+
+
+input:disabled {
+  background-color: #2e2d2d52; /* Color gris */
+  color: #ffffff; /* Color de texto gris */
+  cursor: not-allowed; /* Cambiar el cursor para indicar que está deshabilitado */
+}
+
+.rondasbox{
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  margin-bottom: 100px;
+
+}
+
+.rondasbox p{
+  font-size: 22px;
+}
+.rondasbox input{
+  margin-left: 20px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    background-color: white;
+    font-weight: bold;
+    border-radius: 20%;
+}
+
+.fatal-error{
+  width: 90%;
+  word-wrap: break-word;
+}
+
+.time{
+  margin-left: 10px;
+  float: right;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.adivina-el{
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 10px;
+  font-size: 20px;
+  color: #E0A415;
+}
