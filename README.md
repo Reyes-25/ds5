@@ -50,9 +50,9 @@ La materia **Desarrollo de Software 5** ha sido clave en mi formación. No solo 
 
 ## Tecnologías Usadas
 - **Lenguajes:** JavaScript, HTML, CSS.
-- **Base de Datos:** [Nombre de la base de datos usada, SqLite3].
-- **APIs:** [Nombra las APIs con las que trabajaste, PokeApi].
-- **Herramientas adicionales:** [Indica herramientas como Node.js, Postman, etc.].
+- **Base de Datos:** [SqLite3].
+- **APIs:** [PokeApi].
+- **Herramientas adicionales:** [Node.js, Postman, etc.].
 
 ---
 ## Contacto
